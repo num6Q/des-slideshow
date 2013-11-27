@@ -83,10 +83,10 @@
             clearTimeout(v);
             g.find(".nav").children("li").css("background-image","url("+directory+"flashtext-bg.jpg)").css("border-bottom","1px solid #CCCCCC");
             g.find(".nav").children("li").eq(current).css("background-image","url("+directory+"flash-on.gif)").css("border-bottom","none");
-            g.find(".switchBigPic").children("div").fadeOut();
-            g.find(".switchBigPic").children("div").eq(current).fadeIn();
-            g.find(".nav").children("li").eq(current).animate({marginLeft: '-35px'}, "fast");
-            g.find(".nav").children("li").eq(w).animate({marginLeft: '0px'}, "fast");
+            g.find(".switchBigPic").children("div").stop(true, true).fadeOut();
+            g.find(".switchBigPic").children("div").eq(current).stop(true, true).fadeIn();
+            g.find(".nav").children("li").eq(current).stop(true, true).animate({marginLeft: '-35px'}, "fast");
+            g.find(".nav").children("li").eq(w).stop(true, true).animate({marginLeft: '0px'}, "fast");
             w = current;
 
         }
